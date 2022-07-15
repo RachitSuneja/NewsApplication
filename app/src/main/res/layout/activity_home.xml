@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <Button
+        android:id="@+id/sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button2"
+        android:text="Sign Out"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/sign_out"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:drawableStart="?android:attr/actionModeWebSearchDrawable"
+        android:drawablePadding="15dp"
+        android:drawableTint="#2C42BD"
+        android:hint="Search In Feed"
+        android:inputType="textPersonName"
+        android:outlineSpotShadowColor="@color/black"
+        android:paddingLeft="15dp"
+        android:shadowRadius="@integer/material_motion_duration_long_2"
+        android:textColorHint="#2C42BD"
+        android:textStyle="bold"
+        tools:ignore="MissingC1onstraints" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filter" >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
